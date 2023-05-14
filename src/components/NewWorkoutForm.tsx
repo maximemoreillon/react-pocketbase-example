@@ -1,6 +1,6 @@
 import pb from "../pb"
 import Workout from "../domain/Workout"
-import { useState, useEffect, FormEvent } from "react"
+import { useState, FormEvent } from "react"
 
 export default function NewWorkoutForm() {
   const [exercise, setExercise] = useState("")
