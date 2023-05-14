@@ -24,22 +24,22 @@ export default function NewWorkoutForm() {
         <input
           placeholder="Exercise"
           type="text"
-          onInput={(e) => {
+          onChange={(e) => {
             setExercise(e.target.value)
           }}
         />
         <input
           placeholder="Sets"
           type="number"
-          onInput={(e) => {
-            setSets(e.target.value)
+          onChange={(e) => {
+            setSets(Number(e.target.value))
           }}
         />
         <input
           placeholder="Reps per set"
           type="number"
-          onInput={(e) => {
-            setReps(e.target.value)
+          onChange={(e) => {
+            setReps(Number(e.target.value))
           }}
         />
         <button type="submit">Submit</button>

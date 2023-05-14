@@ -13,8 +13,8 @@ export default function LoginForm() {
 
   return (
     <form onSubmit={handleFormSubmit}>
-      <input type="text" onInput={(e) => setUsername(e.target.value)} />
-      <input type="password" onInput={(e) => setPassword(e.target.value)} />
+      <input type="text" onChange={(e) => setUsername(e.target.value)} />
+      <input type="password" onChange={(e) => setPassword(e.target.value)} />
       <button type="submit">Login</button>
     </form>
   )
