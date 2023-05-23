@@ -5,6 +5,7 @@ import Button from "@mui/material/Button"
 import Grid from "@mui/material/Grid"
 import TextField from "@mui/material/TextField"
 import Box from "@mui/material/Box"
+import Typography from "@mui/material/Typography"
 
 export default function NewWorkoutForm() {
   const [exercise, setExercise] = useState("")
@@ -23,9 +24,11 @@ export default function NewWorkoutForm() {
 
   return (
     <>
-      <h2>Add a new exercise</h2>
-      <Box component="form" onSubmit={handleSubmit}>
-        <Grid container justifyContent="space-between">
+      <Typography variant="h4" component="div" mt={4}>
+        Register a new workout
+      </Typography>
+      <Box component="form" onSubmit={handleSubmit} mt={2}>
+        <Grid container justifyContent="space-between" alignItems="baseline">
           <Grid item>
             <TextField
               label="Exercise"

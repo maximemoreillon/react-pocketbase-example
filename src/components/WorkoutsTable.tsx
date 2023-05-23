@@ -8,6 +8,8 @@ import TableBody from "@mui/material/TableBody"
 import TableCell from "@mui/material/TableCell"
 import TableHead from "@mui/material/TableHead"
 import TableRow from "@mui/material/TableRow"
+import Typography from "@mui/material/Typography"
+import TableContainer from "@mui/material/TableContainer"
 
 export default function WorkoutsTable() {
   const collection = "workouts"
@@ -34,23 +36,27 @@ export default function WorkoutsTable() {
 
   return (
     <>
-      <h2>My workouts</h2>
-      <Table>
-        <TableHead>
-          <TableRow>
-            <TableCell>Time</TableCell>
-            <TableCell>Exercise</TableCell>
-            <TableCell>Sets</TableCell>
-            <TableCell>Reps per set</TableCell>
-            <TableCell>Delete</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {workouts.map((workout) => (
-            <WorkoutsTableRow key={workout.id} workout={workout} />
-          ))}
-        </TableBody>
-      </Table>
+      <Typography variant="h3" component="div" mt={4}>
+        My workouts
+      </Typography>
+      <TableContainer>
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell>Time</TableCell>
+              <TableCell>Exercise</TableCell>
+              <TableCell>Sets</TableCell>
+              <TableCell>Reps per set</TableCell>
+              <TableCell>Delete</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {workouts.map((workout) => (
+              <WorkoutsTableRow key={workout.id} workout={workout} />
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
     </>
   )
 }
